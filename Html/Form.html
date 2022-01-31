@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address Form</title>
     <link rel="stylesheet" href="../css/form.css">
+    <script type="text/javascript" src="../js/form.js"></script>
 </head>
 
 <body>
@@ -30,16 +31,19 @@
             <div>
                 <label class="label text" for="name">Full Name:</label><br>
                 <input class="input" type="text" id="name" name="name" placeholder="Name" required>
+                <error-output class="error-name" for="name"></error-output>
             </div>
             <br>
             <div>
                 <label class="label text" for="phone">Phone Number:</label><br>
                 <input class="input" type="number" id="phone" name="phone" placeholder="Phone Number" required>
+                <error-output class="error-phone" for="phone"></error-output>
             </div>
             <br>
             <div>
                 <label class="label text" for="address">Address:</label>
                 <textarea class="input" placeholder="Address" id="address" name="address" required></textarea>
+                <error-output class="error-address" for="address"></error-output>
             </div>
             <br>
             <div class="row-content">
