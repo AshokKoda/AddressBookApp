@@ -68,3 +68,57 @@ body{
     color: #ffffff;
 }
 
+.form {
+    width: 100%;
+    padding: 44px 60px;
+    margin-top: 10px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #f5f5f5;
+    border-radius: 8px;
+    opacity: 1;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+label {
+    display: inline-block;
+    min-width: 140px;
+}
+
+.text {
+    font-size: 18px;
+    color: #42525f;
+    opacity: 1;
+    font-family: Roboto;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #008CFF;
+    border-radius: 4px;
+    resize: vertical;
+    font: normal normal normal 16px Roboto;
+    letter-spacing: 0px;
+}
+
+.row-content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+    border: 0px solid green;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid#008CFF;
+    border-radius: 4px;
+    resize: vertical;
+    font: normal normal normal 16px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    background-color: transparent;
+}
