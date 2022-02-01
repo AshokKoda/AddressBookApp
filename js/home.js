@@ -23,7 +23,7 @@ const createInnerHTML = () => {
     </tr>`;
 
     let innerHtml = `${headerHtml}`;
-    for (const personData of addressBookList){
+    for (const personData of addressBookList) {
         innerHtml = `${innerHtml}
         <tr>
             <td>${personData._name}</td>
@@ -33,11 +33,21 @@ const createInnerHTML = () => {
             <td>${personData._zipcode}</td>
             <td>${personData._phone}</td>
             <td>
-            <img id="${personData._id}" alt="edit" src="../assets/icons/create-black-18dp.svg" onClick=update(this)>
-            <img id="${personData._id}" alt="delete" src="../assets/icons/delete-black-18dp.svg" onClick=remove(this)>
+            <img alt="edit" src="../assets/icons/create-black-18dp.svg" onClick=update(this)>
+            <img alt="delete" src="../assets/icons/delete-black-18dp.svg" onClick=remove(this)>
             </td>
         </tr>
         `;
     }
     document.querySelector('#display').innerHTML = innerHtml;
 }
+
+//Remove data
+const remove = () => {
+   alert("Delete");
+}
+
+//Update data
+const update = () => {
+    alert("Update");
+ }
