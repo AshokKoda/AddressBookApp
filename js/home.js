@@ -1,7 +1,7 @@
 let addressBookList;
 window.addEventListener('DOMContentLoaded', () => {
     addressBookList = getDataFromStorage();
-    // document.querySelector('.address-count').textContent = addressBookList.length;
+    localStorage.removeItem("edit-person");
     createInnerHTML();
 })
 
@@ -50,11 +50,16 @@ const remove = (data) => {
     const index = addressBookList.map(personData => personData._id).indexOf(deletePerson._id);
     addressBookList.splice(index, 1);
     localStorage.setItem('AddressBookList', JSON.stringify(addressBookList));
-    alert("Person deleted successfully..!")
+    alert("Person deleted successfully..!");
     createInnerHTML();
+    localStorage.removeItem("edit-person");
 }
 
 //Update data
-const update = () => {
-    alert("Update");
+const update = (data) => {
+    let updatePerson = addressBookList.find(personData => personData._id == data.id);
+    if (!updatePerson)
+        return;
+    localStorage.setItem('edit-person', JSON.stringify(updatePerson));
+    window.location.replace(site_properties.form);
 }
