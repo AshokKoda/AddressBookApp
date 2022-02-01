@@ -27,7 +27,7 @@
     </header>
 
     <div class="">
-        <form class="form">
+        <form class="form" onsubmit="save();" onreset="reset();">
             <div>
                 <label class="label text" for="name">Full Name:</label><br>
                 <input class="input" type="text" id="name" name="name" placeholder="Name" required>
@@ -36,7 +36,7 @@
             <br>
             <div>
                 <label class="label text" for="phone">Phone Number:</label><br>
-                <input class="input" type="number" id="phone" name="phone" placeholder="Phone Number" required>
+                <input class="input" type="tel" id="phone" name="phone" placeholder="Phone Number" required>
                 <error-output class="error-phone" for="phone"></error-output>
             </div>
             <br>
@@ -71,6 +71,11 @@
                     <label class="label text" for="zip">Zip Code:</label>
                     <input class="input" type="number" id="zipcode" name="zipcode" placeholder="Zip Code" required>
                 </div>
+            </div>
+            <br>
+            <div class="row-content">
+                <button class="submit-btn" type="submit">SUBMIT</button>
+                <button class="reset-btn" type="reset">RESET</button>
             </div>
         </form>
     </div>

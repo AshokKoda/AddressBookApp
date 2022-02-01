@@ -12,6 +12,7 @@ body{
 .header-text{
     padding: 12px 0;
     background-color: #ffffff;
+    font: normal normal bold 18px/20px Roboto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,6 +38,7 @@ body{
     letter-spacing: 0px;
     color: #008CFF;
     text-transform: uppercase;
+    size: 22px;
 }
 
 .book-text {
@@ -63,9 +65,12 @@ body{
 
 .close {
     float: right;
+    height: 44px;
+    width: 44px;
     cursor: pointer;
     margin-right: 10px;
     color: #ffffff;
+    opacity: 1;
 }
 
 .form {
@@ -96,7 +101,7 @@ label {
 .input {
     width: 100%;
     padding: 8px;
-    border: 1px solid #008CFF;
+    border: 1px solid #656c72;
     border-radius: 4px;
     resize: vertical;
     font: normal normal normal 16px Roboto;
@@ -114,7 +119,7 @@ label {
 select {
     width: 100%;
     padding: 8px;
-    border: 1px solid#008CFF;
+    border: 1px solid#656c72;
     border-radius: 4px;
     resize: vertical;
     font: normal normal normal 16px Roboto;
@@ -127,4 +132,34 @@ error-output {
     font-size: 15px;
     font-style: bold;
     color: red;
+}
+
+.submit-btn {
+    margin: 0px auto;
+    margin-top: 30px;
+    justify-content: space-between;
+    font-size: 15px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    opacity: 1;
+    background-color: grey;
+    padding: 8px 25px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.reset-btn {
+    margin: 0px auto;
+    margin-top: 30px;
+    justify-content: space-between;
+    font-size: 15px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    opacity: 1;
+    background-color: gray;
+    padding: 8px 25px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
 }
