@@ -30,14 +30,14 @@ function validateInputs() {
         }
     });
 
-    // address.addEventListener('input', function () {
-    //     const addressRegex = RegExp('');
-    //     if (addressRegex.test(address.value)) {
-    //         addressError.textContent = "";
-    //     } else {
-    //         addressError.textContent = "Address is incorrect";
-    //     }
-    // });
+    address.addEventListener('input', function () {
+        const addressRegex = RegExp('^([A-Za-z0-9/.,-]{3,}.)+$');
+        if (addressRegex.test(address.value)) {
+            addressError.textContent = "";
+        } else {
+            addressError.textContent = "Invalid address.";
+        }
+    });
 }
 
 //Save

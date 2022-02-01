@@ -8,6 +8,7 @@
     <title>Address Form</title>
     <link rel="stylesheet" href="../css/form.css">
     <script type="text/javascript" src="../js/form.js"></script>
+    <script type="text/javascript" src="../js/AddressBook.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
             <br>
             <div>
                 <label class="label text" for="address">Address:</label>
-                <textarea class="input" placeholder="Address" id="address" name="address" required></textarea>
+                <textarea class="input" placeholder="Address" id="address" name="address" rows="5" required></textarea>
                 <error-output class="error-address" for="address"></error-output>
             </div>
             <br>
@@ -73,9 +74,10 @@
                 </div>
             </div>
             <br>
-            <div class="row-content">
-                <button class="submit-btn" type="submit">SUBMIT</button>
-                <button class="reset-btn" type="reset">RESET</button>
+            <div class="btn-row">
+                <button class="submit-btn" type="submit">Add</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="reset-btn" type="reset">Reset</button>
             </div>
         </form>
     </div>

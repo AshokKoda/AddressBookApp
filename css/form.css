@@ -7,6 +7,7 @@ body{
     height: 100%;
     font-family: sans-serif;
     background-color: #f7f7f7;
+    margin-top: 20px;
 }
 
 .header-text{
@@ -64,18 +65,23 @@ body{
 }
 
 .close {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #008CFF;
+    font: 25px Arial, sans-serif;
     float: right;
-    height: 44px;
-    width: 44px;
     cursor: pointer;
-    margin-right: 10px;
-    color: #ffffff;
+    margin-right: 20px;
+    color: #008CFF;
     opacity: 1;
 }
 
 .form {
     width: 100%;
-    padding: 44px 60px;
+    padding: 45px 60px;
+    padding-bottom: 100px;
     margin-top: 10px;
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #f5f5f5;
@@ -101,11 +107,12 @@ label {
 .input {
     width: 100%;
     padding: 8px;
-    border: 1px solid #656c72;
-    border-radius: 4px;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
     resize: vertical;
     font: normal normal normal 16px Roboto;
     letter-spacing: 0px;
+    margin-top: 5px;
 }
 
 .row-content {
@@ -119,13 +126,14 @@ label {
 select {
     width: 100%;
     padding: 8px;
-    border: 1px solid#656c72;
+    border: 1px solid#bdbdbd;
     border-radius: 4px;
     resize: vertical;
     font: normal normal normal 16px Roboto;
     letter-spacing: 0px;
     color: #42515f;
     background-color: transparent;
+    margin-top: 5px;
 }
 
 error-output {
@@ -134,32 +142,76 @@ error-output {
     color: red;
 }
 
+.btn-row {
+    float: right;
+}
+
 .submit-btn {
     margin: 0px auto;
-    margin-top: 30px;
     justify-content: space-between;
     font-size: 15px;
     font-family: Roboto;
     letter-spacing: 0px;
     opacity: 1;
-    background-color: grey;
-    padding: 8px 25px;
-    color: #ffffff;
-    border: none;
+    background: #E2E2E2 0% 0% no-repeat padding-box;
+    padding: 10px 45px;
+    color: #42515F;
+    border: 1px solid #969696;;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .reset-btn {
     margin: 0px auto;
-    margin-top: 30px;
     justify-content: space-between;
     font-size: 15px;
     font-family: Roboto;
     letter-spacing: 0px;
     opacity: 1;
-    background-color: gray;
-    padding: 8px 25px;
-    color: #ffffff;
-    border: none;
+    background: #E2E2E2 0% 0% no-repeat padding-box;
+    padding: 10px 45px;
+    color: #42515F;
+    border: 1px solid #969696;;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 960px) {
+    .cancelButton {
+        margin-left: 0px;
+    }
+    .form {
+        width: 85%;
+        padding: 44px 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form {
+        margin-top: 10px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .uploadButton {
+        justify-content: flex-start;
+    }
+    .profile-radio-button {
+        flex-flow: wrap;
+    }
+    .submit-reset {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .submitButton {
+        margin: 0;
+    }
+    .buttonParent {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
 }
