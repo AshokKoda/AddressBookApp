@@ -56,8 +56,10 @@ const createAddressBook = () => {
     addressBook.name = getInputValueId("#name");
     addressBook.phone = getInputValueId("#phone");
     addressBook.address = getInputValueId("#address");
-    addressBook.city = getSelectedValue('[name=city]').pop();
-    addressBook.state = getSelectedValue('[name=state]').pop();
+    addressBook.city = getInputValueId("#city");
+    addressBook.state = getInputValueId("#state");
+    // addressBook.city = getSelectedValue('[name=city]').pop();
+    // addressBook.state = getSelectedValue('[name=state]').pop();
     addressBook.zipcode = getInputValueId("#zipcode");
     return addressBook;
 }
