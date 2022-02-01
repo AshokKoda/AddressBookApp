@@ -36,12 +36,12 @@ class AddressBook {
         return this._address;
     }
     set address(address) {
-        const addressRegex = RegExp('^([A-Za-z0-9/.,-]{3,}.)+$');
-        if (addressRegex.test(address.value)) {
-            this._address = address;
-        } else {
-            throw "Invalid address";
-        }
+        // const addressRegex = RegExp('^([A-Za-z0-9/.,-]{3,}.)+$');
+        // if (addressRegex.test(address.value)) {
+        //     this._address = address;
+        // } else {
+        //     throw "Invalid address";
+        // }
     }
 
     get state() {
