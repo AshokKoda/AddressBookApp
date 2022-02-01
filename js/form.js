@@ -97,3 +97,8 @@ const addAndUpdateLocalStorage = (persons) => {
 const reset = () => {
     alert("Reset");
 }
+
+//Cancel
+const cancel = () => {
+    window.location.replace(site_properties.home);
+}
