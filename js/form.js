@@ -58,30 +58,12 @@ const createAddressBook = () => {
     addressBook.address = getInputValueId("#address");
     addressBook.city = getInputValueId("#city");
     addressBook.state = getInputValueId("#state");
-    // addressBook.city = getSelectedValue('[name=city]').pop();
-    // addressBook.state = getSelectedValue('[name=state]').pop();
     addressBook.zipcode = getInputValueId("#zipcode");
     return addressBook;
 }
 
 const getInputValueId = (id) => {
     return document.querySelector(id).value;
-}
-
-const setTextValue = (id, message) => {
-    const textError = document.querySelector(id);
-    textError.textContent = message;
-}
-
-const getSelectedValue = (propertyValue) => {
-    let allItem = document.querySelectorAll(propertyValue);
-    let setItem = [];
-    allItem.forEach(item => {
-        if (item.checked == true) {
-            setItem.push(item.value);
-        }
-    })
-    return setItem;
 }
 
 //Data store in local storage
