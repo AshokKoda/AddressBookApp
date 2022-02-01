@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/form.css">
     <script type="text/javascript" src="../js/form.js"></script>
     <script type="text/javascript" src="../js/AddressBook.js"></script>
+    <script type="text/javascript" src="../js/site_properties.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
     </header>
 
     <div class="">
-        <form class="form" onsubmit="save();" onreset="reset();">
+        <form class="form" onsubmit="save(event);">
             <div>
                 <label class="label text" for="name">Full Name:</label><br>
                 <input class="input" type="text" id="name" name="name" placeholder="Name" required>

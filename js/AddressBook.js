@@ -11,7 +11,7 @@ class AddressBook {
     }
     set name(name) {
         const nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
-        if (nameRegex.test(name.value)) {
+        if (nameRegex.test(name)) {
             this._name = name;
         } else {
             throw "1)First letter must be in uppercase."
@@ -24,7 +24,7 @@ class AddressBook {
     }
     set phone(phone) {
         const phoneRegex = RegExp('^[+][1-9]{2}[-][0-9]{10}$');
-        if (phoneRegex.test(phone.value)) {
+        if (phoneRegex.test(phone)) {
             this._phone = phone;
         } else {
             throw "1)Phone number should be starts with country code"
@@ -37,7 +37,7 @@ class AddressBook {
     }
     set address(address) {
         const addressRegex = RegExp('^([A-Za-z0-9/.,-]{3,}.)+$');
-        if (addressRegex.test(address.value)) {
+        if (addressRegex.test(address)) {
             this._address = address;
         } else {
             throw "Invalid address";
