@@ -33,8 +33,8 @@ const createInnerHTML = () => {
             <td>${personData._zipcode}</td>
             <td>${personData._phone}</td>
             <td>
-            <img alt="edit" src="../assets/icons/create-black-18dp.svg" onClick=update(this)>
-            <img alt="delete" src="../assets/icons/delete-black-18dp.svg" onClick=remove(this)>
+            <img id="${personData._id}" alt="edit" src="../assets/icons/create-black-18dp.svg" onClick=update(this)>
+            <img id="${personData._id}" alt="delete" src="../assets/icons/delete-black-18dp.svg" onClick=remove(this)>
             </td>
         </tr>
         `;
@@ -43,11 +43,18 @@ const createInnerHTML = () => {
 }
 
 //Remove data
-const remove = () => {
-   alert("Delete");
+const remove = (data) => {
+    let deletePerson = addressBookList.find(personData => personData._id == data.id);
+    if (!deletePerson)
+        return;
+    const index = addressBookList.map(personData => personData._id).indexOf(deletePerson._id);
+    addressBookList.splice(index, 1);
+    localStorage.setItem('AddressBookList', JSON.stringify(addressBookList));
+    alert("Person deleted successfully..!")
+    createInnerHTML();
 }
 
 //Update data
 const update = () => {
     alert("Update");
- }
+}

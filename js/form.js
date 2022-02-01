@@ -46,6 +46,7 @@ const save = (event) => {
     event.preventDefault();
     event.stopPropagation();
     let addressBook = createAddressBook();
+    //alert(JSON.stringify(addressBook));
     addAndUpdateLocalStorage(addressBook); //Data store in local storage
     alert("You are added successfully " + addressBook._name);
     window.location.replace(site_properties.home);
@@ -59,6 +60,7 @@ const createAddressBook = () => {
     addressBook.city = getInputValueId("#city");
     addressBook.state = getInputValueId("#state");
     addressBook.zipcode = getInputValueId("#zipcode");
+    addressBook.id = new Date().getTime()+1;
     return addressBook;
 }
 
